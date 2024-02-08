@@ -1,2 +1,4 @@
 # MiningGame
- Players will test their mining speed by clicking on preciours ingots to collect them
+ Players will test their mining speed by clicking on precious ingots to collect them! 
+ The game is made using JavaFX. 
+ 
