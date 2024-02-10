@@ -24,8 +24,6 @@ public class MenuController implements Initializable {
     private AnchorPane menuBackground;
     public static Image mossyStone = new Image("file:src/main/resources/SE2203B/MiningGame/stoneMossyBackground.jpg");
     public static Background mossyStoneBackground = new Background(new BackgroundImage(mossyStone, BackgroundRepeat.REPEAT,BackgroundRepeat.REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT));
-    public static Image wood = new Image("file:src/main/resources/SE2203B/MiningGame/WoodBackground.jpg");
-    public static Background woodBackground = new Background(new BackgroundImage(wood, BackgroundRepeat.REPEAT,BackgroundRepeat.REPEAT, BackgroundPosition.CENTER, BackgroundSize.DEFAULT));
 
     @FXML
     public void start() throws IOException {
@@ -38,11 +36,12 @@ public class MenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         gameTitle.setText("MINING MINER");
-        gameTitle.setBackground(woodBackground);
+        gameTitle.setBackground(MiningGameController.stoneBackground);
         gameDescription.setText("Mine all kind of rare ingots by clicking on them as they spawn on the screen." +
                 "Test your mining skills with differently difficulties and see who will be the fastest miner."+
                 "Press start when you are ready!!!!!");
-        gameDescription.setBackground(woodBackground);
+        gameDescription.setBackground(MiningGameController.stoneBackground);
+        startBtn.setBackground(MiningGameController.stoneBackground);
         menuBackground.setBackground(mossyStoneBackground);
     }
 

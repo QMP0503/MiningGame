@@ -7,18 +7,18 @@
 
 <AnchorPane fx:id="menuBackground" prefHeight="850.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SE2203B.MiningGame.MenuController">
    <children>
-      <Label fx:id="gameTitle" layoutX="223.0" layoutY="122.0" prefHeight="144.0" prefWidth="368.0" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="gameTitle" alignment="CENTER" layoutX="223.0" layoutY="122.0" prefHeight="144.0" prefWidth="368.0" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font size="48.0" />
+            <Font name="Times New Roman" size="48.0" />
          </font>
       </Label>
-      <Label fx:id="gameDescription" layoutX="223.0" layoutY="281.0" prefHeight="144.0" prefWidth="368.0" textAlignment="CENTER" wrapText="true">
+      <Label fx:id="gameDescription" alignment="CENTER" layoutX="223.0" layoutY="281.0" prefHeight="144.0" prefWidth="368.0" textAlignment="CENTER" wrapText="true">
          <font>
-            <Font size="18.0" />
+            <Font name="Times New Roman" size="20.0" />
          </font></Label>
       <Button fx:id="startBtn" layoutX="307.0" layoutY="470.0" mnemonicParsing="false" onAction="#start" prefHeight="79.0" prefWidth="200.0" style="-fx-background-color: grey;" text="START">
          <font>
-            <Font name="Candara" size="26.0" />
+            <Font name="Times New Roman Bold" size="26.0" />
          </font>
       </Button>
    </children>

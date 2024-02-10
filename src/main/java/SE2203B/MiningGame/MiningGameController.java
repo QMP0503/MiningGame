@@ -43,15 +43,15 @@ public class MiningGameController implements Initializable {
 
     @FXML
     private Button resetBtn;
+    public static Image stone = new Image("file:src/main/resources/SE2203B/MiningGame/stonebackground.jpg");
+    public static Background stoneBackground = new Background(new BackgroundImage(stone,BackgroundRepeat.REPEAT,BackgroundRepeat.REPEAT,BackgroundPosition.CENTER, BackgroundSize.DEFAULT));
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         headSizeLabel.setText("Difficulty");
-        Image stone = new Image("file:src/main/resources/SE2203B/MiningGame/stonebackground.jpg");
-        Background stoneBackground = new Background(new BackgroundImage(stone,BackgroundRepeat.REPEAT,BackgroundRepeat.REPEAT,BackgroundPosition.CENTER, BackgroundSize.DEFAULT));
         gameGrid.setBackground(stoneBackground);
         gameBackground.setBackground(MenuController.mossyStoneBackground);
-        difficultyPane.setBackground(MenuController.woodBackground);
+        difficultyPane.setBackground(stoneBackground);
         random = new Random();
         gridSpaces = new LinkedList<>();
         instance = this;
@@ -108,8 +108,8 @@ public class MiningGameController implements Initializable {
             gameGrid.setVisible(false);
             double endTime = System.currentTimeMillis();
             double totalTime = (endTime - startTime) / 1000;
-            endLabel.setBackground(MenuController.woodBackground);
-            endLabel.setText(String.format("Good Job! - You have collected %d Ingots\n Your time was %.2fs", count, totalTime));
+            endLabel.setBackground(stoneBackground);
+            endLabel.setText(String.format("Good Job! You have collected %d Ingots!\n Your time was %.2fs", count, totalTime));
         }
     }
     private Ingot[] getNewIngot(int size) {
